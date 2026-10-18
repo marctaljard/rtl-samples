@@ -8,7 +8,7 @@ Dual-clock FIFO: write and read sides on unrelated clocks, pointers crossed in G
 
     make          # build and run the testbench
     make lint     # strict lint (-Wall)
-    make wave     # run, then open async_fifo.vcd in GTKWave
+    make wave     # run, then open async_fifo.vcd in the waveform viewer
 
 ## Interface
 Port list and parameters: see [`rtl/async_fifo.sv`](rtl/async_fifo.sv).

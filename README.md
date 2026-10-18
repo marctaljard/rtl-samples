@@ -21,7 +21,7 @@ cover.
 |---|---|
 | Windows | Install WSL (`wsl --install` in PowerShell, then reboot), open Ubuntu, then run the Ubuntu line below |
 | Ubuntu / WSL | `sudo apt update && sudo apt install -y verilator g++ make gtkwave` |
-| macOS | `brew install verilator` (GTKWave optional: `brew install --cask gtkwave`) |
+| macOS | `brew install verilator surfer` (Surfer is the waveform viewer here: the GTKWave cask is discontinued, x86-only and blocked by Gatekeeper) |
 
 Check: `verilator --version` should print 5.x.
 

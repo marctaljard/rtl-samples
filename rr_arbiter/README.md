@@ -8,7 +8,7 @@ N-way round-robin arbiter: at most one one-hot grant per cycle; the last winner 
 
     make          # build and run the testbench
     make lint     # strict lint (-Wall)
-    make wave     # run, then open rr_arbiter.vcd in GTKWave
+    make wave     # run, then open rr_arbiter.vcd in the waveform viewer
 
 ## Interface
 Port list and parameters: see [`rtl/rr_arbiter.sv`](rtl/rr_arbiter.sv).

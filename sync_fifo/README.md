@@ -8,7 +8,7 @@ Single-clock FIFO with full and empty flags.
 
     make          # build and run the testbench
     make lint     # strict lint (-Wall)
-    make wave     # run, then open sync_fifo.vcd in GTKWave
+    make wave     # run, then open sync_fifo.vcd in the waveform viewer
 
 ## Interface
 Port list and parameters: see [`rtl/sync_fifo.sv`](rtl/sync_fifo.sv).

@@ -1,8 +1,14 @@
 # Shared build rules. Each module directory sets TOP and includes this file.
 #   make        build and run the testbench
 #   make lint   strict lint of the RTL only
-#   make wave   build and run, then open the waveform in GTKWave
+#   make wave   build and run, then open the waveform (WAVE_VIEWER=... to override)
 VERILATOR ?= verilator
+# The GTKWave cask is x86-only, unsigned and discontinued, so macOS uses Surfer.
+ifeq ($(shell uname -s),Darwin)
+WAVE_VIEWER ?= surfer
+else
+WAVE_VIEWER ?= gtkwave
+endif
 RTL  := $(wildcard rtl/*.sv)
 TB   := $(wildcard tb/*.cpp)
 OBJ  := obj_dir
@@ -21,7 +27,7 @@ lint:
 	$(VERILATOR) --lint-only -Wall --top-module $(TOP) $(RTL)
 
 wave: test
-	gtkwave $(TOP).vcd &
+	$(WAVE_VIEWER) $(TOP).vcd &
 
 clean:
 	rm -rf $(OBJ) *.vcd
