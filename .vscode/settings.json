@@ -1,0 +1,7 @@
+{
+  "verilog.linting.linter": "verilator",
+  "verilog.linting.verilator.arguments": "-Wall",
+  "files.associations": { "*.sv": "systemverilog" },
+  "files.exclude": { "**/obj_dir": true },
+  "editor.rulers": [100]
+}
