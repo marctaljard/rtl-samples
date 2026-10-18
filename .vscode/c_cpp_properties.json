@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "name": "Linux",
+      "includePath": [
+        "${workspaceFolder}/*/obj_dir",
+        "/usr/share/verilator/include",
+        "/usr/share/verilator/include/vltstd"
+      ],
+      "compilerPath": "/usr/bin/g++",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "linux-gcc-x64"
+    },
+    {
+      "name": "Mac",
+      "includePath": [
+        "${workspaceFolder}/*/obj_dir",
+        "/opt/homebrew/share/verilator/include",
+        "/opt/homebrew/share/verilator/include/vltstd"
+      ],
+      "compilerPath": "/usr/bin/clang++",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "macos-clang-arm64"
+    }
+  ],
+  "version": 4
+}
